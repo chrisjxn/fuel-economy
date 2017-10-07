@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 import Header from './components/Header/Header';
 import Capture from './components/Capture/Capture';
@@ -10,7 +11,8 @@ class App extends Component {
     this.state = {
       date: null,
       odometer: null,
-      values: {}
+      refuels: [],
+      baseUrl: 'http://localhost:3000'
     }
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleOdometerChange = this.handleOdometerChange.bind(this);
@@ -26,13 +28,15 @@ class App extends Component {
   }
 
   handleSubmitValues() {
-    this.setState({
-      values: {
-        date: this.state.date,
-        odometer: this.state.odometer
-      }
+    let body = {
+      date: this.state.date,
+      odometer: this.state.odometer
+    };
+
+    axios.post(this.state.baseUrl + '/api/refuel', body)
+    .then(response => {
+      this.setState({ refuels: response.data.refuel })
     })
-    console.log(this.state);
   }
 
 
