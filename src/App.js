@@ -37,6 +37,7 @@ class App extends Component {
     .then(response => {
       this.setState({ refuels: response.data.refuel })
     })
+    console.log(this.state.refuels);
   }
 
 

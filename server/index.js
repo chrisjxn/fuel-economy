@@ -5,8 +5,8 @@ const express = require('express'),
     refuel = require('./controllers/controller');
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../public'));
+// app.use(express.static(__dirname + '/../public'));
 
 app.post('/api/refuel', refuel.create);
 
-app.listen(port, () => console.log(`listening on port ${port}.`));
+app.listen(port, () => console.log(`listening on port ${port}`));
