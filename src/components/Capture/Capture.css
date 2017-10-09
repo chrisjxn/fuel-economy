@@ -1,9 +1,9 @@
 .capture_wrapper {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 150px;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 30vh;
 }
 
 .input_box {
@@ -13,8 +13,25 @@
     border-style: solid;
     border-color: white;
     border-width: 0.5px;
-    color: grey;
-    font-weight: 300;
+    color: #222222;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.notes_box {
+    margin-bottom: 20px;
+    background: rgba(255,255,255,0.6);
+    padding: 5px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.5px;
+    color: #222222;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+    transition: height 0.5s ease-in-out;
+    height: 18px;
 }
 
 .enter_button {
@@ -27,4 +44,13 @@
     border-radius: 50%;
     text-align: center;
     margin: auto;
+}
+
+.input_box:focus {
+    outline-color: #d40000;
+}
+
+.notes_box:focus {
+    height: 100px;
+    outline-color: #d40000;
 }
