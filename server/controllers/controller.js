@@ -130,5 +130,23 @@ module.exports = {
 
         refuels.push(newRefuel);
         res.status(200).send(refuels);
+    },
+    read: (req, res) => {
+        res.status(200).send(refuels);
+    },
+    update: (req, res) => {
+        refuels = refuels.map(item => {
+            if (+req.params.id === item.id) {
+                item = Object.assign(item, req.body)
+            }
+            return item
+        })
+        res.status(200).send(refuels);
+    },
+    delete: (req, res) => {
+        refuels = refuels.filter(item => {
+            return item.id !== +req.params.id
+        })
+        res.status(200).send(refuels)
     }
 }

@@ -1,4 +1,40 @@
 .list_wrapper {
-    position: absolute;
-    top: 105vh;
+    color: #222222;
+    font-size: 0.9rem;
+    margin: 110px 20px 20px 20px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 20px 0px;
+    margin: auto;
+}
+
+td {
+    padding: 3px 0px;
+}
+
+th {
+    padding: 3px 0px;
+    font-weight: bold;
+}
+
+.left_column {
+      text-align: left;
+}
+
+.center_column {
+    text-align: center;
+}
+
+.right_column {
+    text-align: left;
+}
+
+.edit_button {
+    background: transparent;
+    border: none;
+    color: #222222;
+    text-align: center;
+    margin: auto;
 }

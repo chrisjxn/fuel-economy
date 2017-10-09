@@ -1,13 +1,17 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
-    app = express(),
+    cors = require('cors'),
+    refuel = require('./controllers/controller'),
     port = 3000,
-    refuel = require('./controllers/controller');
+    app = express();
 
 app.use(bodyParser.json());
-// app.use(express.static(__dirname + '/../public'));
+app.use(cors());
 
 app.post('/api/refuel', refuel.create);
+app.get('/api/refuel', refuel.read);
+app.put('/api/refuel/:id', refuel.update);
+app.delete('/api/refuel/:id', refuel.delete);
 // add read, update and read here
 // make sure to convert strings to numbers (see examples using +)
 
