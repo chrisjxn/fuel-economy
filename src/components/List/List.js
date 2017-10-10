@@ -11,7 +11,7 @@ export default function List(props) {
             <button 
             className="edit_button" 
             onClick={() => props.handleViewRefuel(props.index)}>
-            <i class="fa fa-pencil-square-o"></i>
+            <i className="fa fa-pencil-square-o"></i>
             </button>
         </tr>
     )

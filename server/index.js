@@ -12,7 +12,5 @@ app.post('/api/refuel', refuel.create);
 app.get('/api/refuel', refuel.read);
 app.put('/api/refuel/:id', refuel.update);
 app.delete('/api/refuel/:id', refuel.delete);
-// add read, update and read here
-// make sure to convert strings to numbers (see examples using +)
 
 app.listen(port, () => console.log(`listening on port ${port}`));

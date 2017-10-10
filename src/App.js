@@ -19,7 +19,8 @@ class App extends Component {
       notes: '',
       refuels: [],
       currentObject: {},
-      baseUrl: 'http://localhost:3000'
+      baseUrl: 'http://localhost:3000',
+
     }
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleOdometerChange = this.handleOdometerChange.bind(this);
@@ -77,6 +78,7 @@ class App extends Component {
       })
   }
 
+ 
   render() {
     let refuelsList = this.state.refuels.map((item, i) => {
       return (
@@ -89,6 +91,7 @@ class App extends Component {
         />
       )
     })
+
 
     return (
       <div className="App">
